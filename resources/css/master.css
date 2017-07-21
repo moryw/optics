@@ -5,6 +5,11 @@ html {
   font-family: Helvetica;
 }
 
+h5 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 
 /* container styling */
 
@@ -81,16 +86,49 @@ header .flex {
 /* sales styling */
 
 .sales {
-
+  justify-content: center;
 }
 
-sale img {
+.sale {
+  height: 8rem;
+  width: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem;
+}
 
+.sale img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#paper {
+  width: 3.5rem;
 }
 
 
+/* about styling */
+.about {
+  justify-content: center;
+  margin-bottom: 5rem;
+}
 
+.info {
+  width: 35%;
+  margin-right: 5%;
+}
 
+.info h5 {
+  background-color: cadetblue;
+  color: white;
+  width: 10rem;
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 1rem;
+}
 
 
 
