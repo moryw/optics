@@ -40,12 +40,14 @@ header {
   align-items: center;
   background-color: cadetblue;
   color: white;
+  font-weight: lighter;
+  padding: 1rem 0;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  padding-left: 2rem;
+  margin-left: 2rem;
 }
 
 .logo img {
@@ -54,11 +56,15 @@ header {
 }
 
 nav {
-  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 15.9rem;
+  flex-shrink: 2;
+  margin-right: 2rem;
 }
 
-nav a {
-  padding-right: 2rem;
+.mobile-nav {
+  display: none;
 }
 
 
@@ -119,13 +125,13 @@ header .flex {
 
 .info {
   width: 35%;
-  margin-right: 5%;
+  margin: 2.5%;
 }
 
 .info h5 {
   background-color: cadetblue;
   color: white;
-  width: 10rem;
+  width: auto;
   padding: 0.5rem 1.25rem;
   margin-bottom: 1rem;
 }
@@ -140,11 +146,126 @@ footer {
   box-sizing: border-box; /* Opera/IE 8+ */
 }
 
+/* mq for max 1040 */
+@media only screen and (max-width: 1040px) {
+  .tag-line {
+    margin-right: -1rem;
+  }
+}
 
 /* media query for 1024 to 470 */
-@media only screen and (max-width 1024px){
+@media only screen and (max-width: 1024px){
 
+  /* container and header for medium screen */
+  .container {
+    max-width: 100%;
+  }
 
+  header {
+    height: 22rem;
+    padding-top: 0;
+  }
+
+  .tag-line {
+    position: relative;
+    top: 5rem;
+    padding: 0.75rem 4rem;
+    margin-right: 2rem;
+  }
+
+  .tag-line span {
+    font-size: 1.33rem;
+  }
+}
+
+/* media query for less than 630px */
+@media only screen and (max-width: 630px) {
+  header .logo span {
+    display: none;
+  }
+}
+
+/* media query for less than 570px */
+@media only screen and (max-width: 470px) {
+
+  /* header, nav and tag-line for small screen */
+  header {
+    background-position: 20%;
+    height: 17rem;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  .standard-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    flex-basis: auto;
+  }
+
+  .tag-line {
+    position: relative;
+    top: 9rem;
+    padding: 1rem 0;
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .tag-line span {
+    font-size: 1rem;
+  }
+
+  /* sales section for small screens */
+  .sales {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+  }
+
+  .sale {
+    margin: 0.77rem 0;
+  }
+
+  .sale span {
+    font-size: 0.77rem;
+  }
+
+  /* about section for small screen */
+  .about {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .info {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 4rem;
+    font-size: 0.77rem;
+  }
+
+  .info h5 {
+    width: auto;
+    text-align: center;
+  }
+
+  .info p {
+    padding: 0 0.5rem;
+  }
+
+  /* footer styling for small screens */
+  footer .logo {
+    justify-content: center;
+    margin: auto;
+  }
+
+  footer .logo img {
+    padding: 0;
+  }
 
 }
 
